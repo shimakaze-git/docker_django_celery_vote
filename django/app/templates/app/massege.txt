@@ -1,0 +1,7 @@
+データベースが更新されました。
+
+処理内容：{{ action }}
+作成時間：{{ item.created_at }}
+作成者：{{ item.created_by }}
+
+http://localhost:8000/detail/{{ item.pk }}

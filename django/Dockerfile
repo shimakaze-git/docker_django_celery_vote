@@ -26,8 +26,8 @@ RUN pip install -r requirements.txt
 RUN pwd && ls -la
 
 # Run Migration
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
 
 # Run Django Application
-ENTRYPOINT ["python", "manage.py", "runserver"]
+# ENTRYPOINT ["python", "manage.py", "runserver"]
