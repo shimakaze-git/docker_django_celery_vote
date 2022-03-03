@@ -7,6 +7,18 @@ services:
     ports:
       - 6370:6379
 
+  db:
+    container_name: db
+    image: postgres:12
+    restart: always
+    tty: true
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - 5430:5432
+
   django:
     container_name: django
     build: ./django
@@ -56,3 +68,5 @@ services:
   #   depends_on:
   #     - redis
 
+volumes:
+  db_data:
